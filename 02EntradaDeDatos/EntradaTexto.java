@@ -19,6 +19,7 @@ class EntradaTexto {
         // tipo de dato
         String nombre;
         // el ; es el fin de linea
+        int edad;
         // instancia
         System.out.println("Por favor introduce tu nombre asi bien kawaii");
 
@@ -26,7 +27,11 @@ class EntradaTexto {
 
         nombre = System.console().readLine();
 
-        System.out.println("Hola " + nombre + "bienvenido a tu programita");
+        System.out.println("Por favor introduce tu edad: ");
+
+        edad = Integer.parseInt(System.console().readLine());
+
+        System.out.println("Hola " + nombre + " bienvenido a tu programita tienes " + edad + " anios ");
     }
 
 }

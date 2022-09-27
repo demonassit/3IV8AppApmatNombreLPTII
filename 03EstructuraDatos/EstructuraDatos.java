@@ -138,6 +138,51 @@ class EstructuraDatos {
                     }
                     break;
 
+                case 11:
+                    break;
+
+                case 12:
+                    break;
+
+                case 13:
+                    // calculadora
+                    System.out.println("Bienvenido a la calculadora maizsoro");
+                    System.out.println("Ingresa el primer numero");
+                    a = entrada.nextInt();
+                    System.out.println("Ingresa el segundo numero");
+                    b = entrada.nextInt();
+                    System.out.println("Ingresa el tipo de operacion (+ - * /)");
+                    char ope = entrada.next().charAt(0);
+                    switch (ope) {
+                        case '+':
+                            resultado = a + b;
+                            System.out.println("La suma es: " + resultado);
+                            break;
+                        case '-':
+                            resultado = a - b;
+                            System.out.println("La resta es: " + resultado);
+                            break;
+                        case '*':
+                            resultado = a * b;
+                            System.out.println("La multiplicacion es: " + resultado);
+                            break;
+                        case '/':
+                            if (b != 0) {
+                                resultado = a / b;
+                                System.out.println("La division es: " + resultado);
+                            } else {
+                                System.out.println(
+                                        "El señor del sistema web con php y bd distribuida lo va a resolver y comprobar porque dijo que daba igual");
+                            }
+
+                            break;
+                        default:
+                            System.out.println("Operacion no admitida solo sabemos + - * /");
+
+                    }
+                default:
+                    System.out.println("Operacion no admitida T_T");
+
             }
 
             // Debo de preguntar

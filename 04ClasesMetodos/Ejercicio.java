@@ -62,21 +62,135 @@ class Ejercicio {
 
     // metodo 1
     public void Ejercicio1() {
+        // calculadora
+        // + - * /
+        double num1 = 0.00, suma = 0.00, multi = 1.00;
+        char operacion;
+
+        System.out.println("Seleccionar la operacion que deseas realizar: ");
+        System.out.println("a.- Suma y Resta");
+        System.out.println("b.- Multiplicacion");
+        System.out.println("c.- Division");
+
+        operacion = entrada.next().charAt(0);
+
+        switch (operacion) {
+            case 'a':
+                /** que sume tantos numeros como desee */
+                do {
+                    System.out.println("Para detener la operacion presione 0");
+                    System.out.println("Escriba tantos numeros como quiera sumar o restar");
+                    num1 = entrada.nextDouble();
+                    suma += num1;
+                    // suma = suma +num1;
+                    System.out.println("El resultado es: " + suma);
+                } while (num1 != 0);
+                break;
+            case 'b':
+                /** que sume tantos numeros como desee */
+                do {
+                    System.out.println("Para detener la operacion presione 0");
+                    System.out.println("Escriba tantos numeros como quiera multiplicar");
+                    num1 = entrada.nextDouble();
+                    multi *= num1;
+                    // multi = multi *num1;
+                    System.out.println("El resultado es: " + multi);
+                } while (num1 != 0);
+                break;
+            case 'c':
+                System.out.println("Ingrese el numerador");
+                num1 = entrada.nextDouble();
+                System.out.println("Ingrese el denominador");
+                suma = entrada.nextDouble();
+
+                if (suma == 0) {
+                    System.out.println("No se puede realizar la division entre 0");
+                } else {
+                    multi = num1 / suma;
+                }
+
+                System.out.println("El resultado de la division es: " + multi);
+                break;
+            default:
+                System.out.println("Opcion no valida");
+                break;
+
+        }
 
     }
 
     // metodo 2
     public void Ejercicio2() {
+        /**
+         * realizar una conversion de
+         * metros a cm y pulgadas
+         * kg a libras y gramos
+         * m/s a km/h
+         */
+        double metros = 0.00, kg = 0.00, vel = 0.00, cm = 100.00, pulgadas = 39.37, gramos = 1000.00, libra = 2.20,
+                ms = 0.00;
+
+        double a, b;
+
+        System.out.println("Seleccione la cantidad que desee convertir: ");
+        System.out.println("a. Metros a cm y pulgadas");
+        System.out.println("b. Kg a libras y gramos");
+        System.out.println("c. m/s a km/h");
+        op = entrada.next().charAt(0);
+
+        switch (op) {
+            case 'a':
+                System.out.println("Ingrese la cantidad de metros");
+                metros = entrada.nextDouble();
+                a = metros * cm;
+                b = metros * pulgadas;
+                System.out.println(
+                        "La cantidad de metros son: " + metros + " en cm son: " + a + " en pulgadas son: " + b);
+                break;
+            case 'b':
+                System.out.println("Ingrese la cantidad de kilogramos");
+                kg = entrada.nextDouble();
+                a = kg * gramos;
+                b = kg * libra;
+                System.out.println("La cantidad de kg son: " + kg + " en gramos son: " + a + " en libras son: " + b);
+                break;
+            case 'c':
+                System.out.println("Ingrese la cantidad de m/s");
+                ms = entrada.nextDouble();
+                a = ms * (3600 / 1000);
+
+                System.out.println("La conversion de m/s a km/h son: " + a);
+                break;
+            default:
+                System.out.println("Opcion no valida ayos");
+                break;
+        }
 
     }
 
     // metodo 3
     public void Ejercicio3() {
-
+        /*
+         * Vamos a realizar un programa que se encargue de imprimir con *
+         * un cuadrado de maximo 1000 de dimension
+         */
     }
 
     // metodo 4
     public void Ejercicio4() {
+        /*
+         * Vamos a realizar un programa que se encargue de imprimir con
+         ******************
+         * 
+         * //////////////////
+         ******************
+         * //////////////////
+         ******************
+         * 
+         * 
+         * 
+         * un cuadrado de maximo 100 de dimension
+         */
 
     }
 
